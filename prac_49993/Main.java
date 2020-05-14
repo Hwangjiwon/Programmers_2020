@@ -5,41 +5,50 @@ import java.util.Queue;
 
 public class Main {
 
-   public static void main(String[] args) {
-      // TODO Auto-generated method
+	public static void main(String[] args) {
+		// TODO Auto-generated method
 
-      String skill = "CBD";
-      String[] skill_trees = { "BACDE", "CBADF", "AECB", "BDA" };
+		String skill = "CBD";
+		String[] skill_trees = { "AEFG", "BACDE", "CBADF", "AECB", "BDA" };
 
-      System.out.println(solution(skill, skill_trees));
-   }
+		System.out.println(solution(skill, skill_trees));
+	}
 
-   public static int solution(String skill, String[] skill_trees) {
-      int answer = 0;
+	public static int solution(String skill, String[] skill_trees) {
+		int answer = 0;
 
-      char[] s = new char[skill.length() + 1];
-      s = skill.toCharArray();
+		char[] s = new char[skill.length() + 1];
+		s = skill.toCharArray();
 
-      for (int i = 0; i < skill_trees.length; i++) {
-         Queue<Character> q = new LinkedList<>();
-         
-         char[] st = new char[skill_trees[i].length() + 1];
-         st = skill_trees[i].toCharArray();
+		for (int i = 0; i < skill_trees.length; i++) {
+			Queue<Character> q = new LinkedList<>();
 
-         for (int j = 0; j < st.length; j++) {
-            for (int k = 0; k < s.length; k++) {
-               if(st[j] == s[k]){
-                  q.add(st[j]);
-                  System.out.println(st[j]);
-               }
-            }
-         }
-         System.out.println();
-         
-         //Queue 와 비교
-         
-      }
+			char[] st = new char[skill_trees[i].length() + 1];
+			st = skill_trees[i].toCharArray();
 
-      return answer;
-   }
+			for (int j = 0; j < st.length; j++) {
+				for (int k = 0; k < s.length; k++) {
+					if (st[j] == s[k]) {
+						q.add(st[j]);
+					}
+				}
+			}
+			boolean chk = false;
+			// Queue 와 비교
+
+			for (int j = 0; j < s.length; j++) {
+				if (q.size() == 0 || s[j] == q.peek()) {
+					q.poll();
+					chk = true;
+				} else
+					break;
+			}
+
+			if (chk == true) {
+				answer++;
+			}
+		}
+
+		return answer;
+	}
 }

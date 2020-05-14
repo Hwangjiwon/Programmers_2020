@@ -9,7 +9,7 @@ public class Main {
 		// TODO Auto-generated method
 
 		String skill = "CBD";
-		String[] skill_trees = { "AEFG", "BACDE", "CBADF", "AECB", "BDA" };
+		String[] skill_trees = { "CXF", "ASF", "BDF", "CEFD", "AEFG", "BACDE", "CBADF", "AECB", "BDA" };
 
 		System.out.println(solution(skill, skill_trees));
 	}
@@ -40,8 +40,10 @@ public class Main {
 				if (q.size() == 0 || s[j] == q.peek()) {
 					q.poll();
 					chk = true;
-				} else
+				} else {
+					chk = false;
 					break;
+				}
 			}
 
 			if (chk == true) {

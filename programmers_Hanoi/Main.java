@@ -7,4 +7,8 @@ public class Main {
 
 	}
 
+	public void move(char a, char b, int n) {
+		System.out.println(n + a + " -> " + b);
+	}
+
 }

@@ -14,6 +14,10 @@ public class Main {
 		br.close();
 	}
 
+	public void hanoi() {
+		
+	}
+	
 	public void move(char a, char b, int n) {
 		System.out.println(n + a + " -> " + b);
 	}

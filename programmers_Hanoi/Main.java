@@ -14,7 +14,7 @@ public class Main {
 		br.close();
 	}
 
-	public void hanoi() {
+	public void hanoi(char a, char b, char tmp) {
 		
 	}
 	

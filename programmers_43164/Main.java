@@ -1,6 +1,8 @@
 package programmers_43164;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 
@@ -14,7 +16,7 @@ public class Main {
 	 * 
 	 */
 
-	public static LinkedList<String> link = new LinkedList<>();
+	public static ArrayList<String> link = new ArrayList<>();
 	public static boolean[] visited;
 	public static String router = "";
 
@@ -31,7 +33,7 @@ public class Main {
 	}
 
 	public static String[] solution(String[][] tickets) {
-		String[] answer = new String[tickets.length + 1];
+		String[] answer = {};
 		visited = new boolean[tickets.length];
 
 		// to 부분 알파벳 순서로 정렬
@@ -44,9 +46,9 @@ public class Main {
 			}
 		});
 
-		for (int i = 0; i < tickets.length; i++) {
-			System.out.println(tickets[i][0] + " : " + tickets[i][1]);
-		}
+//		for (int i = 0; i < tickets.length; i++) {
+//			System.out.println(tickets[i][0] + " : " + tickets[i][1]);
+//		}
 
 		for (int i = 0; i < tickets.length; i++) {
 			String from = tickets[i][0];
@@ -65,6 +67,10 @@ public class Main {
 		for (int i = 0; i < answer.length; i++) {
 			System.out.println(answer[i]);
 		}
+		
+//		Collections.sort(link);
+//        answer = link.get(0).split("->");
+        
 		return answer;
 	}
 
@@ -72,8 +78,8 @@ public class Main {
 		router += (go + "->");
 
 		if (cnt == tickets.length) {
-			if (link.size() == 0)
-				link.add(router);
+			System.out.println(router);
+			link.add(router);
 			return;
 		}
 
@@ -85,6 +91,7 @@ public class Main {
 				visited[i] = true;
 				dfs(to, tickets, cnt + 1);
 				visited[i] = false;
+				router = router.substring(0, router.length()-5);
 			}
 		}
 	}

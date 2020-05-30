@@ -26,7 +26,12 @@ public class Main {
 		 */
 		int tmp;
 		int row, col;
-		tmp = brown * yellow;
+		tmp = brown + yellow;
+
+		for (int i = 0; i < brown; i++) {
+			
+		}
+
 		return answer;
 	}
 }

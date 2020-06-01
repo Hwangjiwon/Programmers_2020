@@ -25,6 +25,6 @@ public class Main {
 			answer += String.valueOf(tmp[i]);
 		}
 
-		return answer.trim();
+		return answer;
 	}
 }

@@ -17,13 +17,6 @@ public class Main {
 	public static int[] solution(int brown, int yellow) {
 		int[] answer = {};
 
-		/*
-		 * $$$$$$% &@@@@@% ******%
-		 */
-
-		/*
-		 * $$$% &@@% &@@% &***
-		 */
 		int tmp;
 		int row, col;
 		tmp = brown + yellow;

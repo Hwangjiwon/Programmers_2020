@@ -22,7 +22,7 @@ public class Main {
 		tmp = brown + yellow;
 
 		for (int i = 0; i < brown; i++) {
-			
+			int cnt = 0;
 		}
 
 		return answer;

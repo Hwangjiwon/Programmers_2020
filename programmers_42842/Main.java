@@ -17,12 +17,14 @@ public class Main {
 	public static int[] solution(int brown, int yellow) {
 		int[] answer = {};
 
+		
 		int tmp;
 		int row, col;
 		tmp = brown + yellow;
 
 		for (int i = 0; i < brown; i++) {
 			int cnt = 0;
+			int t = 0;
 		}
 
 		return answer;

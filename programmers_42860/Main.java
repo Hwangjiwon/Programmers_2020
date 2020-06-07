@@ -1,7 +1,9 @@
 package programmers_42860;
 
-public class Main {
+import java.util.Arrays;
 
+public class Main {
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		String name = "JAZ";
@@ -11,6 +13,12 @@ public class Main {
 	
 	public static int solution(String name) {
         int answer = 0;
+        char[] alpha = new char[name.length()+1];
+        char[] split = name.toCharArray();
+        
+        Arrays.fill(alpha, 'A');
+        
+        
         return answer;
     }
 
